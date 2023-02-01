@@ -6,4 +6,5 @@ If using multiple alert scripts, it is best to cache the json data to a file.  T
 # Cron:
 ```
 */2 * * * *   root    /usr/bin/curl "https://swd.weatherflow.com/swd/rest/observations/station/73221?token=<put your Weatherflow API token here>" > /scripts/wxresult
+@reboot       root    /usr/bin/python3 /scripts/uvWatch.py &
 ```
