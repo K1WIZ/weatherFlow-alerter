@@ -31,7 +31,13 @@ def check_uv():
             from_address = "" # Set your FROM address here
             to_address = "" # Set your destination address here
             subject = f"Dangerous UV Alert: ({now.strftime('%m-%d-%Y %I:%M %p')})"
-            message = f"THIS IS AN AUTOMATED WARNING - DO NOT REPLY \nWeather sensors have detected DANGEROUS UV LEVELS at or greater than {uv_level} in our neighborhood.  If outdoors or poolside, please consider moving to safe shelter immediately to avoid dangerous exposure.  Re-assess conditions after 1 hour from the time of this alert.  If no more alerts are received after 1 hour has passed, conditions should have expired and you should proceed outdoors with caution.  If conditions have not expired within 1 hour from this alert, you will receive another message if the unsafe condition is continued 1 hour from now\n\nPlease tune in to local broadcast outlets to get the latest information on weather conditions.  \n\nSTAY SAFE!"
+            message = f"THIS IS AN AUTOMATED WARNING - DO NOT REPLY \nWeather sensors have detected DANGEROUS UV LEVELS at or \
+                greater than {uv_level} in our neighborhood.  If outdoors or poolside, please consider moving to safe shelter \
+                immediately to avoid dangerous exposure.  Re-assess conditions after 1 hour from the time of this alert.  If \
+                no more alerts are received after 1 hour has passed, conditions should have expired and you should proceed \
+                outdoors with caution.  If conditions have not expired within 1 hour from this alert, you will receive another \
+                message if the unsafe condition is continued 1 hour from now\n\nPlease tune in to local broadcast outlets to \
+                get the latest information on weather conditions.  \n\nSTAY SAFE!"
             smtp_server = ""  # Put your SMTP relay here
             email_message = f"From: {from_address}\nTo: {to_address}\nSubject: {subject}\n\n{message}"
             with smtplib.SMTP(smtp_server) as server:
