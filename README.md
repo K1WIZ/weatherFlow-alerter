@@ -1,7 +1,7 @@
 # weatherFlow-alerter
 Python scripts I wrote to generate e-mail alerts from my weatherflow tempest weather data
 
-If using multiple alert scripts, it is best to cache the json data to a file and have the watchdog scripts read relevant data from the file.  This minimizes your API calls.  To do this, I set a command in cron to dump data from the API to a local file: /scripts/wxresult  You can run this on a VM or even a raspberry pi computer board.
+If using multiple alert scripts, it is best to cache the json data to a file and have the watchdog scripts read relevant data from the file.  This minimizes your API calls.  To do this, I set a command in cron to dump data from the API to a local file: /scripts/wxresult  You can run this on a VM, docker container, or even a raspberry pi computer board.
 
 # Cron:
 ```
